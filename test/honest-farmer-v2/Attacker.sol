@@ -15,10 +15,12 @@ contract Attacker {
         _lendingPoolV2.borrow{ value: 20 ether }(100_000 * 1e18, address(this));
     }
 
+    uint state = 0;
+
     function executeAttack() public {
-
-        /** CODE YOUR SOLUTION HERE */
-
+        // forge test -vvvvv --match-contract 'HonestFarmerV2Challenge'
+        if (state != 0) revert("No Liquidation");
+        state++;
     }
 
     receive() external payable {
