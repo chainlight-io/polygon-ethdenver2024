@@ -6,7 +6,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {LendingPoolV2} from "src/honest-farmer-v2/LendingPoolV2.sol";
 import {Oracle} from "src/honest-farmer-v2/Oracle.sol";
 
-import {Attacker} from "./solution/Attacker.sol";
+import {Attacker} from "./Attacker.sol";
 
 import "forge-std/Test.sol";
 import "forge-std/console.sol";
